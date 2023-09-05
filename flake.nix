@@ -33,6 +33,16 @@
           })
         ];
       };
+      apps = {
+        vm = {
+          type = "app";
+          program = "${config.packages.vm}/bin/run-nixos-vm";
+        };
+        vm-containered = {
+          type = "app";
+          program = "${config.packages.vm-containered}/bin/run-nixos-vm";
+        };
+      };
     };
   };
 }
