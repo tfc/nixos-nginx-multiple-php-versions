@@ -26,9 +26,7 @@
             containers.webserver = {
               autoStart = true;
               privateNetwork = false;
-              config = { ... }: { # NixOS config of within the container
-                imports = [ ./nginx-php.nix ];
-              };
+              config = ./nginx-php.nix;
             };
           })
         ];
